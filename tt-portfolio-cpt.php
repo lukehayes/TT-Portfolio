@@ -49,16 +49,7 @@ function tt_register_portolio_cpt() {
         'capability_type'     => 'post',
         'supports'            => array(
             'title',
-            'editor',
-            'author',
-            'thumbnail',
-            'excerpt',
-            'custom-fields',
-            'trackbacks',
-            'comments',
-            'revisions',
-            'page-attributes',
-            'post-formats',
+            'editor'
         ),
     );
 
