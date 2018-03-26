@@ -14,18 +14,18 @@
 function tt_register_portolio_cpt() {
 
     $labels = array(
-        'name'               => __( 'Portfolio Items', 'tt_portfolio' ),
-        'singular_name'      => __( 'Portfolio Item', 'tt_portfolio' ),
-        'add_new'            => _x( 'Add New Portfolio Item', 'tt_portfolio', 'tt_portfolio' ),
-        'add_new_item'       => __( 'Add New Portfolio Item', 'tt_portfolio' ),
-        'edit_item'          => __( 'Edit Portfolio', 'tt_portfolio' ),
-        'new_item'           => __( 'New Portfolio Item', 'tt_portfolio' ),
-        'view_item'          => __( 'View Portfolio Item', 'tt_portfolio' ),
-        'search_items'       => __( 'Search Portfolio Items', 'tt_portfolio' ),
-        'not_found'          => __( 'No Portfolio Items found', 'tt_portfolio' ),
-        'not_found_in_trash' => __( 'No Portfolio Items found in Trash', 'tt_portfolio' ),
-        'parent_item_colon'  => __( 'Parent Portfolio:', 'tt_portfolio' ),
-        'menu_name'          => __( 'Portfolio Items', 'tt_portfolio' ),
+        'name'               => esc_html( 'Portfolio Items', 'tt_portfolio' ),
+        'singular_name'      => esc_html( 'Portfolio Item', 'tt_portfolio' ),
+        'add_new'            => esc_html_x( 'Add New Portfolio Item', 'tt_portfolio', 'tt_portfolio' ),
+        'add_new_item'       => esc_html( 'Add New Portfolio Item', 'tt_portfolio' ),
+        'edit_item'          => esc_html( 'Edit Portfolio', 'tt_portfolio' ),
+        'new_item'           => esc_html( 'New Portfolio Item', 'tt_portfolio' ),
+        'view_item'          => esc_html( 'View Portfolio Item', 'tt_portfolio' ),
+        'search_items'       => esc_html( 'Search Portfolio Items', 'tt_portfolio' ),
+        'not_found'          => esc_html( 'No Portfolio Items found', 'tt_portfolio' ),
+        'not_found_in_trash' => esc_html( 'No Portfolio Items found in Trash', 'tt_portfolio' ),
+        'parent_item_colon'  => esc_html( 'Parent Portfolio:', 'tt_portfolio' ),
+        'menu_name'          => esc_html( 'Portfolio Items', 'tt_portfolio' ),
     );
 
     $args = array(
