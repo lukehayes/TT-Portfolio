@@ -15,4 +15,4 @@ ob_start();
 /* Helper Constants -----------------------------------------------*/
 
 /* Portfolio Custom Post Type -------------------------------------*/
-require plugin_dir_path( __FILE__ ) . 'tt-portfolio.php';
+require plugin_dir_path( __FILE__ ) . 'tt-portfolio-cpt.php';
