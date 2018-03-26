@@ -31,7 +31,7 @@ function tt_register_portolio_cpt() {
     $args = array(
         'labels'              => $labels,
         'hierarchical'        => false,
-        'description'         => 'description',
+        'description'         => 'The Portfolio Custom Post Type',
         'taxonomies'          => array(),
         'public'              => true,
         'show_ui'             => true,
