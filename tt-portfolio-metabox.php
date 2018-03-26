@@ -13,8 +13,8 @@ add_action('add_meta_boxes', 'tt_add_portfolio_metabox');
 
 function tt_build_metabox_html() {
     ?>
-    <label for="tt_mb_client">Client: </label>
-    <input type="text" name="tt_mb_client" placeholder="The name of the client the work is for perhaps?">
+    <label for="tt_portfolio_mb_client">Client: </label>
+    <input type="text" name="tt_portfolio_mb_client" placeholder="The name of the client the work is for perhaps?">
 
     <label for="tt_portfolio_mb_date">Date: </label>
     <input type="text" name="tt_portfolio_mb_date" placeholder="Could be year, month etc...">
