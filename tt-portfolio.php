@@ -15,12 +15,12 @@ function tt_register_portolio_cpt() {
 
     $labels = array(
         'name'               => __( 'Portfolio Items', 'tt_portfolio' ),
-        'singular_name'      => __( 'Portfolio', 'tt_portfolio' ),
-        'add_new'            => _x( 'Add New Portfolio', 'tt_portfolio', 'tt_portfolio' ),
-        'add_new_item'       => __( 'Add New Portfolio', 'tt_portfolio' ),
+        'singular_name'      => __( 'Portfolio Item', 'tt_portfolio' ),
+        'add_new'            => _x( 'Add New Portfolio Item', 'tt_portfolio', 'tt_portfolio' ),
+        'add_new_item'       => __( 'Add New Portfolio Item', 'tt_portfolio' ),
         'edit_item'          => __( 'Edit Portfolio', 'tt_portfolio' ),
-        'new_item'           => __( 'New Portfolio', 'tt_portfolio' ),
-        'view_item'          => __( 'View Portfolio', 'tt_portfolio' ),
+        'new_item'           => __( 'New Portfolio Item', 'tt_portfolio' ),
+        'view_item'          => __( 'View Portfolio Item', 'tt_portfolio' ),
         'search_items'       => __( 'Search Portfolio Items', 'tt_portfolio' ),
         'not_found'          => __( 'No Portfolio Items found', 'tt_portfolio' ),
         'not_found_in_trash' => __( 'No Portfolio Items found in Trash', 'tt_portfolio' ),
