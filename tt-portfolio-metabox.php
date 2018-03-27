@@ -22,6 +22,9 @@ function tt_build_metabox_html( $post ) {
     ?>
     <table class="form-table">
         <tr>
+            <h4>Add additonal information about your portfolio item here:</h4>
+        </tr>
+        <tr>
             <th class="row-title">
                 <label for="tt_portfolio_mb_client">Client: </label>
                 <input type="text" name="tt_portfolio_mb_client" class="regular-text" placeholder="The name of the client the work is for perhaps?">
