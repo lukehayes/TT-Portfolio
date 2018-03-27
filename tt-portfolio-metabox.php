@@ -24,13 +24,13 @@ function tt_build_metabox_html( $post ) {
         <p>
             <p class="howto">Additional information about the client, like a name/brand.</p>
             <label for="tt_portfolio_mb_client">Client: </label>
-            <input type="text" name="tt_portfolio_mb_client" placeholder="The name of the client the work is for perhaps?">
+            <input type="text" name="tt_portfolio_mb_client" class="regular-text" placeholder="The name of the client the work is for perhaps?">
         </p>
 
         <p>
             <p class="howto">When the work was completed.</p>
             <label for="tt_portfolio_mb_date">Date: </label>
-            <input type="text" name="tt_portfolio_mb_date" placeholder="Could be year, month etc...">
+            <input type="text" name="tt_portfolio_mb_date" class="regular-text" placeholder="Could be year, month etc...">
         </p>
     </div>
     <?php
