@@ -7,7 +7,14 @@
  * Add the portfolio metabox the the custom post type
  */
 function tt_add_portfolio_metabox() {
-    add_meta_box( 'tt_portfolio_metabox', 'Portfolio Information', 'tt_build_metabox_html', 'portfolio', $context = 'normal', $priority = 'high', $callback_args = null );
+    add_meta_box(
+        'tt_portfolio_metabox',
+        'Portfolio Information',
+        'tt_build_metabox_html',
+        'portfolio',
+        $context = 'normal',
+        $priority = 'high',
+        $callback_args = null );
 }
 add_action('add_meta_boxes', 'tt_add_portfolio_metabox');
 
