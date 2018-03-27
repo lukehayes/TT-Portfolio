@@ -20,12 +20,21 @@ add_action('add_meta_boxes', 'tt_add_portfolio_metabox');
 
 function tt_build_metabox_html( $post ) {
     ?>
-    <p class="howto">Additional information about the client, like a name/brand.</p>
-    <label for="tt_portfolio_mb_client">Client: </label>
-    <input type="text" name="tt_portfolio_mb_client" class="regular-text" placeholder="The name of the client the work is for perhaps?">
+    <table class="form-table">
+        <tr>
+            <th class="row-title">
+                <label for="tt_portfolio_mb_client">Client: </label>
+                <input type="text" name="tt_portfolio_mb_client" class="regular-text" placeholder="The name of the client the work is for perhaps?">
+            </th>
+        </tr>
 
-    <p class="howto">When the work was completed.</p>
-    <label for="tt_portfolio_mb_date">Date: </label>
-    <input type="text" name="tt_portfolio_mb_date" class="regular-text" placeholder="Could be year, month etc...">
+        <tr>
+            <th>
+                <label for="tt_portfolio_mb_date">Date: </label>
+                <input type="text" name="tt_portfolio_mb_date" class="regular-text" placeholder="Could be year, month etc...">
+            </th>
+        </tr>
+
+    </table>
     <?php
 }
