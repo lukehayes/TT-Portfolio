@@ -11,7 +11,7 @@ function tt_add_portfolio_metabox() {
 }
 add_action('add_meta_boxes', 'tt_add_portfolio_metabox');
 
-function tt_build_metabox_html() {
+function tt_build_metabox_html( $post ) {
     ?>
     <div class="inside">
         <p>
