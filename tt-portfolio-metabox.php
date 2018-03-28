@@ -46,16 +46,6 @@ function tt_build_metabox_html( $post ) {
     <?php
 }
 
-function tt_save_mb_values($post_id) {
-
-    echo '---------------------------------------------------------------------';
-    echo '---------------------------------------------------------------------';
-    for($i = 0; $i <= 20; $i++) {
-        var_dump($_POST);
-        var_dump($_REQUEST);
-        var_dump($post_id);
-    }
-    echo '---------------------------------------------------------------------';
-    echo '---------------------------------------------------------------------';
+function tt_save_mb_values($post_id, $post) {
 }
-add_action('save_post', 'tt_save_mb_values');
+add_action('save_post_portfolio', 'tt_save_mb_values', 10, 2);
