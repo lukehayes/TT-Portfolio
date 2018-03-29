@@ -3,6 +3,12 @@
  * Register the meta boxes for the Portfolio Custom Post Type
  */
 
+
+$inputs = [
+    'client' => 'tt_portfolio_mb_client',
+    'date' => 'tt_portfolio_mb_date',
+];
+
 /**
  * Add the portfolio metabox the the custom post type
  */
@@ -31,7 +37,7 @@ function tt_build_metabox_html( $post ) {
         <tr>
             <th class="row-title">
                 <label for="tt_portfolio_mb_client">Client: </label>
-                <input type="text" id="tt_portfolio_mb_client" name="tt_portfolio_mb_client" class="regular-text" placeholder="The name of the client the work is for perhaps?">
+                <input type="text" id="tt_portfolio_mb_client" name="tt_portfolio_mb_client" class="regular-text" placeholder="The name of the datdatework is for perhaps?">
             </th>
         </tr>
 
