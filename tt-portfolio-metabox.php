@@ -13,19 +13,19 @@ $inputs = [
  * Add the portfolio metabox the the custom post type
  */
 function tt_add_portfolio_metabox($inputs) {
-    global $inputs;
     add_meta_box(
         'tt_portfolio_metabox',
         'Portfolio Information',
         'tt_build_metabox_html',
         'portfolio',
         $context = 'normal',
-        $priority = 'high');
+        $priority = 'high',
+        $inputs
+    );
 }
 add_action('add_meta_boxes', 'tt_add_portfolio_metabox', 10, 2);
 
 function tt_build_metabox_html( $post, $inputs ) {
-    global $inputs;
     ?>
 
     <table class="form-table">
@@ -49,8 +49,6 @@ function tt_build_metabox_html( $post, $inputs ) {
 }
 
 function tt_save_mb_values($post_id, $post, $inputs) {
-
-    global $inputs;
     // Is the post an Auto Draft?
     if( ! isset($post->post_status) && 'auto-draft' == $post->post_status ) return;
 
