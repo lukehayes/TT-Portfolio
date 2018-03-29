@@ -26,12 +26,6 @@ add_action('add_meta_boxes', 'tt_add_portfolio_metabox', 10, 2);
 
 function tt_build_metabox_html( $post, $inputs ) {
     global $inputs;
-        echo "Meta";
-        var_dump(get_post_meta($post->ID, $inputs['client'] ));
-        var_dump(get_post_meta($post->ID, $inputs['date'] ));
-        echo "Post <br/>";
-        var_dump($_POST);
-        var_dump($_REQUEST);
     ?>
 
     <table class="form-table">
