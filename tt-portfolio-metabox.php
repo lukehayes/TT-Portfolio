@@ -63,18 +63,18 @@ function tt_save_mb_values($post_id, $post ) {
     if ( ! current_user_can( 'edit_post', $post_id ) ) return;
 
     // Has the input value been set?
-    if( isset($_POST[ $inputs['client'] ]) ) {
-        update_post_meta( $post_id, $inputs['client'], $_POST[ $inputs['client'] ] );
+    if( isset($_POST[ $inputs['Client'] ]) ) {
+        update_post_meta( $post_id, $inputs['Client'], $_POST[ $inputs['Client'] ] );
     }
 
     // Has the input value been set?
-    if( isset($_POST[ $inputs['date'] ]) ) {
-        update_post_meta( $post_id, $inputs['date'], $_POST[ $inputs['date'] ] );
+    if( isset($_POST[ $inputs['Date'] ]) ) {
+        update_post_meta( $post_id, $inputs['Date'], $_POST[ $inputs['Date'] ] );
     }
 
     // Check the nonce
     // if ( empty($_POST[tt_portfolio_mb_client_nonce]) || ! wp_verify_nonce( $_POST[tt_portfolio_mb_client_nonce], basename(__FILE__) ) ) return;
 
-    // if ( ! array_key_exists($inputs['client'], $_POST)) return;
+    // if ( ! array_key_exists($inputs['Client'], $_POST)) return;
 }
 add_action('save_post_portfolio', 'tt_save_mb_values', 10, 2);
