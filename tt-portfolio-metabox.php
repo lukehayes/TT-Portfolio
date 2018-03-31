@@ -39,8 +39,6 @@ function tt_build_metabox_html( $post, $args ) {
             <h4>Add additonal information about your portfolio item here:</h4>
         </tr>
         <?php foreach ($args['args'] as $key => $value): ?>
-            <?php $key; ?>
-            <?php $value; ?>
             <tr>
                 <th class="row-title">
                     <label for="tt_portfolio_mb_client"><?php echo $key ?>: </label>
