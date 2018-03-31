@@ -7,7 +7,7 @@
  * Define the inputs in an array to keep things dry
  */
 function tt_get_input_fields() {
-    return = [
+    return [
         'client' => 'tt_portfolio_mb_client',
         'date' => 'tt_portfolio_mb_date'
     ];
@@ -35,18 +35,16 @@ function tt_build_metabox_html( $post, $args ) {
         <tr>
             <h4>Add additonal information about your portfolio item here:</h4>
         </tr>
-        <tr>
-            <th class="row-title">
-                <label for="tt_portfolio_mb_client">Client: </label>
-                <input type="text" id="<?php echo $args['args']['client'] ?>" name="<?php echo $args['args']['client'] ?>" class="regular-text" placeholder="The name of the datdatework is for perhaps?" value="<?php echo get_post_meta($post->ID, $args['args']['client'], true); ?>">
-            </th>
-        </tr>
-        <tr>
-            <th class="row-title">
-                <label for="tt_portfolio_mb_client">Date: </label>
-                <input type="text" id="<?php echo $args['args']['date'] ?>" name="<?php echo $args['args']['date'] ?>" class="regular-text" placeholder="When the work was completed" value="<?php echo get_post_meta($post->ID, $args['args']['date'], true); ?>">
-            </th>
-        </tr>
+        <?php foreach ($args['args'] as $key => $value): ?>
+            <?php $key; ?>
+            <?php $value; ?>
+            <tr>
+                <th class="row-title">
+                    <label for="tt_portfolio_mb_client"><?php echo $key ?></label>
+                    <input type="text" id="<?php echo $value ?>" name="<?php echo $value ?>" class="regular-text" placeholder="The name of the datdatework is for perhaps?" value="<?php echo get_post_meta($post->ID, $value, true); ?>">
+                </th>
+            </tr>
+        <?php endforeach ?>
     </table>
     <?php
 }
