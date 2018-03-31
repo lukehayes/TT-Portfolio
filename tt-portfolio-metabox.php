@@ -40,7 +40,7 @@ function tt_build_metabox_html( $post, $args ) {
             <?php $value; ?>
             <tr>
                 <th class="row-title">
-                    <label for="tt_portfolio_mb_client"><?php echo $key ?></label>
+                    <label for="tt_portfolio_mb_client"><?php echo $key ?>: </label>
                     <input type="text" id="<?php echo $value ?>" name="<?php echo $value ?>" class="regular-text" placeholder="The name of the datdatework is for perhaps?" value="<?php echo get_post_meta($post->ID, $value, true); ?>">
                 </th>
             </tr>
