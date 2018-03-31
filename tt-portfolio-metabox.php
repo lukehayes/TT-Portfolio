@@ -7,11 +7,10 @@
  * Define the inputs in an array to keep things dry
  */
 function getInputArray() {
-    $inputs = [
+    return = [
         'client' => 'tt_portfolio_mb_client',
         'date' => 'tt_portfolio_mb_date'
     ];
-    return $inputs;
 }
 
 /**
