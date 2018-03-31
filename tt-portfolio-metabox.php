@@ -66,13 +66,11 @@ function tt_save_mb_values($post_id, $post ) {
     if ( ! current_user_can( 'edit_post', $post_id ) ) return;
 
     // Has the input value been set?
-    if( isset($_POST[ $inputs['Client'] ]) ) {
-        update_post_meta( $post_id, $inputs['Client'], $_POST[ $inputs['Client'] ] );
-    }
-
-    // Has the input value been set?
-    if( isset($_POST[ $inputs['Date'] ]) ) {
-        update_post_meta( $post_id, $inputs['Date'], $_POST[ $inputs['Date'] ] );
+    foreach ($inputs as $key => $value) {
+        // If so, update the value
+        if( isset($_POST[ $value ]) ) {
+            update_post_meta( $post_id, $value, $_POST[ $value ] );
+        }
     }
 
     // Check the nonce
