@@ -3,11 +3,16 @@
  * Register the meta boxes for the Portfolio Custom Post Type
  */
 
-
-$inputs = [
-    'client' => 'tt_portfolio_mb_client',
-    'date' => 'tt_portfolio_mb_date'
-];
+/**
+ * Define the inputs in an array to keep things dry
+ */
+function getInputArray() {
+    $inputs = [
+        'client' => 'tt_portfolio_mb_client',
+        'date' => 'tt_portfolio_mb_date'
+    ];
+    return $inputs;
+}
 
 /**
  * Add the portfolio metabox the the custom post type
@@ -20,12 +25,12 @@ function tt_add_portfolio_metabox($inputs) {
         'portfolio',
         $context = 'normal',
         $priority = 'high',
-        $inputs
+        $data = getInputArray()
     );
 }
 add_action('add_meta_boxes', 'tt_add_portfolio_metabox', 10, 2);
 
-function tt_build_metabox_html( $post, $inputs ) {
+function tt_build_metabox_html( $post, $args ) {
     ?>
 
     <table class="form-table">
@@ -35,13 +40,13 @@ function tt_build_metabox_html( $post, $inputs ) {
         <tr>
             <th class="row-title">
                 <label for="tt_portfolio_mb_client">Client: </label>
-                <input type="text" id="<?php echo $inputs['client'] ?>" name="<?php echo $inputs['client'] ?>" class="regular-text" placeholder="The name of the datdatework is for perhaps?" value="<?php echo get_post_meta($post->ID, $inputs['client'], true); ?>">
+                <input type="text" id="<?php echo $args['args']['client'] ?>" name="<?php echo $args['args']['client'] ?>" class="regular-text" placeholder="The name of the datdatework is for perhaps?" value="<?php echo get_post_meta($post->ID, $args['args']['client'], true); ?>">
             </th>
         </tr>
         <tr>
             <th class="row-title">
                 <label for="tt_portfolio_mb_client">Date: </label>
-                <input type="text" id="<?php echo $inputs['date'] ?>" name="<?php echo $inputs['date'] ?>" class="regular-text" placeholder="When the work was completed" value="<?php echo get_post_meta($post->ID, $inputs['date'], true); ?>">
+                <input type="text" id="<?php echo $args['args']['date'] ?>" name="<?php echo $args['args']['date'] ?>" class="regular-text" placeholder="When the work was completed" value="<?php echo get_post_meta($post->ID, $args['args']['date'], true); ?>">
             </th>
         </tr>
     </table>
