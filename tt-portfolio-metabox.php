@@ -32,7 +32,6 @@ add_action('add_meta_boxes', 'tt_add_portfolio_metabox', 10, 2);
 
 function tt_build_metabox_html( $post, $args ) {
     ?>
-
     <table class="form-table">
         <tr>
             <h4>Add additonal information about your portfolio item here:</h4>
@@ -53,7 +52,10 @@ function tt_build_metabox_html( $post, $args ) {
     <?php
 }
 
-function tt_save_mb_values($post_id, $post, $inputs) {
+function tt_save_mb_values($post_id, $post ) {
+
+    $inputs = getInputArray();
+
     // Is the post an Auto Draft?
     if( ! isset($post->post_status) && 'auto-draft' == $post->post_status ) return;
 
@@ -78,4 +80,4 @@ function tt_save_mb_values($post_id, $post, $inputs) {
 
     // if ( ! array_key_exists($inputs['client'], $_POST)) return;
 }
-add_action('save_post_portfolio', 'tt_save_mb_values', 10, 3);
+add_action('save_post_portfolio', 'tt_save_mb_values', 10, 2);
