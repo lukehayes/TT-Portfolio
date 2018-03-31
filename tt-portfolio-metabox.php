@@ -38,6 +38,9 @@ function tt_build_metabox_html( $post, $args ) {
         <tr>
             <h4>Add additonal information about your portfolio item here:</h4>
         </tr>
+
+        <?php wp_nonce_field( basename(__FILE__), 'tt_portfolio_mb_nonce' ); ?>
+
         <?php foreach ($args['args'] as $key => $value): ?>
             <tr>
                 <th class="row-title">
@@ -63,6 +66,11 @@ function tt_save_mb_values($post_id, $post ) {
     // Is the current user allowed here?
     if ( ! current_user_can( 'edit_post', $post_id ) ) return;
 
+    // Check our nonce
+    if ( !isset( $_POST['tt_portfolio_mb_nonce'] ) || !wp_verify_nonce( $_POST['tt_portfolio_mb_nonce'], basename( __FILE__ ) ) ){
+        return;
+    }
+
     // Has the input value been set?
     foreach ($inputs as $key => $value) {
         // If so, update the value
@@ -71,9 +79,5 @@ function tt_save_mb_values($post_id, $post ) {
         }
     }
 
-    // Check the nonce
-    // if ( empty($_POST[tt_portfolio_mb_client_nonce]) || ! wp_verify_nonce( $_POST[tt_portfolio_mb_client_nonce], basename(__FILE__) ) ) return;
-
-    // if ( ! array_key_exists($inputs['Client'], $_POST)) return;
 }
 add_action('save_post_portfolio', 'tt_save_mb_values', 10, 2);
