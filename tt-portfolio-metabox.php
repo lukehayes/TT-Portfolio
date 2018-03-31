@@ -8,8 +8,8 @@
  */
 function tt_get_input_fields() {
     return [
-        'client' => 'tt_portfolio_mb_client',
-        'date' => 'tt_portfolio_mb_date'
+        'Client' => 'tt_portfolio_mb_client',
+        'Date' => 'tt_portfolio_mb_date'
     ];
 }
 
