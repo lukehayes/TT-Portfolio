@@ -29,6 +29,9 @@ function tt_add_portfolio_metabox($inputs) {
 }
 add_action('add_meta_boxes', 'tt_add_portfolio_metabox', 10, 2);
 
+/**
+ * Callback to build the Portfolio CPT metabox HTML
+ */
 function tt_build_metabox_html( $post, $args ) {
     ?>
     <table class="form-table">
