@@ -6,7 +6,7 @@
 /**
  * Define the inputs in an array to keep things dry
  */
-function getInputArray() {
+function tt_get_input_fields() {
     return = [
         'client' => 'tt_portfolio_mb_client',
         'date' => 'tt_portfolio_mb_date'
@@ -24,7 +24,7 @@ function tt_add_portfolio_metabox($inputs) {
         'portfolio',
         $context = 'normal',
         $priority = 'high',
-        $data = getInputArray()
+        $data = tt_get_input_fields()
     );
 }
 add_action('add_meta_boxes', 'tt_add_portfolio_metabox', 10, 2);
@@ -53,7 +53,7 @@ function tt_build_metabox_html( $post, $args ) {
 
 function tt_save_mb_values($post_id, $post ) {
 
-    $inputs = getInputArray();
+    $inputs = tt_get_input_fields();
 
     // Is the post an Auto Draft?
     if( ! isset($post->post_status) && 'auto-draft' == $post->post_status ) return;
