@@ -10,8 +10,6 @@ Text Domain: Portfolio
 Domain Path: /
 */
 
-ob_start();
-
 /* Portfolio Custom Post Type -------------------------------------*/
 require plugin_dir_path( __FILE__ ) . 'tt-portfolio-cpt.php';
 
