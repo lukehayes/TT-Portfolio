@@ -25,7 +25,7 @@ function tt_register_portolio_cpt() {
         'not_found'          => esc_html( 'No Portfolio Items found', 'tt_portfolio' ),
         'not_found_in_trash' => esc_html( 'No Portfolio Items found in Trash', 'tt_portfolio' ),
         'parent_item_colon'  => esc_html( 'Parent Portfolio:', 'tt_portfolio' ),
-        'menu_name'          => esc_html( 'Portfolio Items', 'tt_portfolio' ),
+        'menu_name'          => esc_html( 'Portfolio', 'tt_portfolio' ),
     );
 
     $args = array(
