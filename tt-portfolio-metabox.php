@@ -45,7 +45,7 @@ function tt_build_metabox_html( $post, $args ) {
             <tr>
                 <th class="row-title">
                     <label for="tt_portfolio_mb_client"><?php echo $key ?>: </label>
-                    <input type="text" id="<?php echo $value ?>" name="<?php echo $value ?>" class="regular-text" placeholder="The name of the datdatework is for perhaps?" value="<?php echo get_post_meta($post->ID, $value, true); ?>">
+                    <input type="text" id="<?php esc_attr_e( $value, 'tt-portfolio' ); ?>" name="<?php esc_attr_e($value, 'tt-portfolio'); ?>" class="regular-text" placeholder="The name of the datdatework is for perhaps?" value="<?php esc_html_e(get_post_meta($post->ID, $value, true)); ?>">
                 </th>
             </tr>
         <?php endforeach ?>
