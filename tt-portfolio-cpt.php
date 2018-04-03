@@ -18,7 +18,7 @@ function tt_register_portolio_cpt() {
         'singular_name'      => esc_html( 'Portfolio Item', 'tt_portfolio' ),
         'add_new'            => esc_html_x( 'Add New Portfolio Item', 'tt_portfolio', 'tt_portfolio' ),
         'add_new_item'       => esc_html( 'Add New Portfolio Item', 'tt_portfolio' ),
-        'edit_item'          => esc_html( 'Edit Portfolio', 'tt_portfolio' ),
+        'edit_item'          => esc_html( 'Edit Portfolio Item', 'tt_portfolio' ),
         'new_item'           => esc_html( 'New Portfolio Item', 'tt_portfolio' ),
         'view_item'          => esc_html( 'View Portfolio Item', 'tt_portfolio' ),
         'search_items'       => esc_html( 'Search Portfolio Items', 'tt_portfolio' ),
