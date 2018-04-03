@@ -3,7 +3,7 @@
 Plugin Name: Themetacular Portfolio
 Plugin URI: http://www.themetacular.com/plugins/tt-portfolio
 Description: Portfolio Custom Post Type for Themetacular Wordpress themes.
-Version: 0.1.0
+Version: 1.0.0
 Author: Themetacular
 Author URI: http://www.themetacular.com
 Text Domain: Portfolio
