@@ -38,7 +38,7 @@ function tt_register_portolio_cpt() {
         'show_in_menu'        => true,
         'show_in_admin_bar'   => true,
         'menu_position'       => null,
-        'menu_icon'           => null,
+        'menu_icon'           => 'dashicons-images-alt',
         'show_in_nav_menus'   => true,
         'publicly_queryable'  => true,
         'exclude_from_search' => false,
