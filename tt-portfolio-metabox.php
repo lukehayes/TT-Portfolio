@@ -67,15 +67,11 @@ function tt_build_metabox_html( $post, $args ) {
                     </th>
                 </tr>
                 <?php
-                break;
+                    break;
 
                 default:
-                ?>
-                <p> NOTGINF </p>
-                <?php
                     break;
             }
-
             ?>
         <?php endforeach ?>
     </table>
