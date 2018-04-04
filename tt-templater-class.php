@@ -11,6 +11,10 @@ class TT_Templater {
         add_action('template_include', array($this, 'tt_portfolio_load_tpl') ,1);
     }
 
+    /**
+     * TT_Templater class getter
+     * @return object A singleton instance of TT_Templater
+     */
     public static function get_instance() {
         if ( is_null(self::$instance )) {
             self::$instance = new TT_Templater;
