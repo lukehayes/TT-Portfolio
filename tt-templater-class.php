@@ -22,3 +22,5 @@ class TT_Templater {
         }
     }
 }
+
+new TT_Templater();
