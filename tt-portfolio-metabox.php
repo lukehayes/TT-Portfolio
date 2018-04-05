@@ -48,7 +48,7 @@ function tt_build_metabox_html( $post, $args ) {
                 ?>
                     <p>
                         <label for="<?php echo $value; ?>"><?php echo $key ?>: </label>
-                        <textarea rows="7" name="<?php esc_attr_e($value, 'tt-portfolio'); ?>" class="regular-text" placeholder="Add a description about the project."><?php esc_attr_e(get_post_meta($post->ID, $value, true)); ?></textarea>
+                        <textarea rows="7" name="<?php esc_attr_e($value, 'tt-portfolio'); ?>" class="regular-text" placeholder="Describe the project that you where involved in. What you did and what it involved for example."><?php esc_attr_e(get_post_meta($post->ID, $value, true)); ?></textarea>
                     </p>
                 <?php
                     break;
@@ -58,7 +58,7 @@ function tt_build_metabox_html( $post, $args ) {
                 ?>
                     <p>
                         <label for="<?php echo $value; ?>"><?php echo $key ?>: </label>
-                        <input type="text" id="<?php esc_attr_e( $value, 'tt-portfolio' ); ?>" name="<?php esc_attr_e($value, 'tt-portfolio'); ?>" class="regular-text" placeholder="The name of the datdatework is for perhaps?" value="<?php esc_attr_e(get_post_meta($post->ID, $value, true)); ?>">
+                        <input type="text" id="<?php esc_attr_e( $value, 'tt-portfolio' ); ?>" name="<?php esc_attr_e($value, 'tt-portfolio'); ?>" class="regular-text" placeholder="The name of the work is for perhaps?" value="<?php esc_attr_e(get_post_meta($post->ID, $value, true)); ?>">
                     </p>
                 <?php
                     break;
