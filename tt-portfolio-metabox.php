@@ -35,10 +35,8 @@ add_action('add_meta_boxes', 'tt_add_portfolio_metabox', 10, 2);
  */
 function tt_build_metabox_html( $post, $args ) {
     ?>
-    <table class="form-table">
-        <tr>
-            <h4>Add additonal information about your portfolio item here:</h4>
-        </tr>
+    <div class="inside">
+        <h4>Add additonal information about your portfolio item here:</h4>
 
         <?php wp_nonce_field( basename(__FILE__), 'tt_portfolio_mb_nonce' ); ?>
 
@@ -48,32 +46,28 @@ function tt_build_metabox_html( $post, $args ) {
                 // Make a text area for the description post meta
                 case 'tt_portfolio_description':
                 ?>
-                <tr>
-                    <th class="row-title">
+                    <p>
                         <label for="<?php echo $value; ?>"><?php echo $key ?>: </label>
                         <textarea name="<?php esc_attr_e($value, 'tt-portfolio'); ?>" class="regular-text widefat" placeholder="Add a description about the project.">
                             <?php esc_html_e(get_post_meta($post->ID, $value, true)); ?>
                         </textarea>
-                    </th>
-                </tr>
+                    </p>
                 <?php
                     break;
 
                 // Make a standard input box for the rest of the inputs
                 default:
                 ?>
-                <tr>
-                    <th class="row-title">
+                    <p>
                         <label for="<?php echo $value; ?>"><?php echo $key ?>: </label>
                         <input type="text" id="<?php esc_attr_e( $value, 'tt-portfolio' ); ?>" name="<?php esc_attr_e($value, 'tt-portfolio'); ?>" class="regular-text" placeholder="The name of the datdatework is for perhaps?" value="<?php esc_html_e(get_post_meta($post->ID, $value, true)); ?>">
-                    </th>
-                </tr>
+                    </p>
                 <?php
                     break;
             }
             ?>
         <?php endforeach ?>
-    </table>
+    </div> <!-- .inside -->
     <?php
 }
 
