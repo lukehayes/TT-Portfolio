@@ -54,11 +54,20 @@ function tt_build_metabox_html( $post, $args ) {
                     break;
 
                 // Make a standard input box for the rest of the inputs
-                default:
+                case 'tt_portfolio_client':
                 ?>
                     <p>
                         <label for="<?php echo $value; ?>"><?php echo $key ?>: </label>
                         <input type="text" id="<?php esc_attr_e( $value, 'tt-portfolio' ); ?>" name="<?php esc_attr_e($value, 'tt-portfolio'); ?>" class="regular-text" placeholder="The name of the work is for perhaps?" value="<?php esc_attr_e(get_post_meta($post->ID, $value, true)); ?>">
+                    </p>
+                <?php
+                    break;
+
+                case 'tt_portfolio_date':
+                ?>
+                    <p>
+                        <label for="<?php echo $value; ?>"><?php echo $key ?>: </label>
+                        <input type="text" id="<?php esc_attr_e( $value, 'tt-portfolio' ); ?>" name="<?php esc_attr_e($value, 'tt-portfolio'); ?>" class="regular-text" placeholder="The date that the work took place." value="<?php esc_attr_e(get_post_meta($post->ID, $value, true)); ?>">
                     </p>
                 <?php
                     break;
