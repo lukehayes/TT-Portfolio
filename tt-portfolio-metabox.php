@@ -35,7 +35,7 @@ add_action('add_meta_boxes', 'tt_add_portfolio_metabox', 10, 2);
  */
 function tt_build_metabox_html( $post, $args ) {
     ?>
-    <div class="inside">
+    <div id="tt-portfolio" class="inside">
         <h4>Add additonal information about your portfolio item here:</h4>
 
         <?php wp_nonce_field( basename(__FILE__), 'tt_portfolio_mb_nonce' ); ?>
