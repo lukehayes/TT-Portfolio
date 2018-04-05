@@ -48,8 +48,7 @@ function tt_build_metabox_html( $post, $args ) {
                 ?>
                     <p>
                         <label for="<?php echo $value; ?>"><?php echo $key ?>: </label>
-                        <textarea name="<?php esc_attr_e($value, 'tt-portfolio'); ?>" class="regular-text" placeholder="Add a description about the project.">
-                            <?php esc_attr_e(get_post_meta($post->ID, $value, true)); ?>
+                        <textarea name="<?php esc_attr_e($value, 'tt-portfolio'); ?>" class="regular-text" placeholder="Add a description about the project."><?php esc_attr_e(get_post_meta($post->ID, $value, true)); ?>
                         </textarea>
                     </p>
                 <?php
