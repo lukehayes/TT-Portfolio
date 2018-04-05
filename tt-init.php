@@ -21,7 +21,7 @@ require plugin_dir_path( __FILE__ ) . 'tt-templater-class.php';
 
 /* Load the admin CSS styles --------------------------------------*/
 function tt_portfolio_admin_css() {
-    $path = plugin_dir_path(__FILE__) . 'styles/tt-portfolio-admin-style.css';
+    $path = plugin_dir_url(__FILE__) . 'styles/tt-portfolio-admin-style.css';
     wp_register_style( 'tt-portfolio-admin-css', $path, array(), false, $media = 'all' );
     wp_enqueue_style( 'tt-portfolio-admin-css');
 }
