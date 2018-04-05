@@ -45,17 +45,7 @@ function tt_build_metabox_html( $post, $args ) {
         <?php foreach ($args['args'] as $key => $value): ?>
             <?php
             switch ($value) {
-                case 'tt_portfolio_client':
-                case 'tt_portfolio_date':
-                ?>
-                <tr>
-                    <th class="row-title">
-                        <label for="<?php echo $value; ?>"><?php echo $key ?>: </label>
-                        <input type="text" id="<?php esc_attr_e( $value, 'tt-portfolio' ); ?>" name="<?php esc_attr_e($value, 'tt-portfolio'); ?>" class="regular-text" placeholder="The name of the datdatework is for perhaps?" value="<?php esc_html_e(get_post_meta($post->ID, $value, true)); ?>">
-                    </th>
-                </tr>
-                <?php
-                    break;
+                // Make a text area for the description post meta
                 case 'tt_portfolio_description':
                 ?>
                 <tr>
@@ -69,7 +59,16 @@ function tt_build_metabox_html( $post, $args ) {
                 <?php
                     break;
 
+                // Make a standard input box for the rest of the inputs
                 default:
+                ?>
+                <tr>
+                    <th class="row-title">
+                        <label for="<?php echo $value; ?>"><?php echo $key ?>: </label>
+                        <input type="text" id="<?php esc_attr_e( $value, 'tt-portfolio' ); ?>" name="<?php esc_attr_e($value, 'tt-portfolio'); ?>" class="regular-text" placeholder="The name of the datdatework is for perhaps?" value="<?php esc_html_e(get_post_meta($post->ID, $value, true)); ?>">
+                    </th>
+                </tr>
+                <?php
                     break;
             }
             ?>
