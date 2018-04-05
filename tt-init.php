@@ -25,4 +25,4 @@ function tt_portfolio_admin_css() {
     wp_register_style( 'tt-portfolio-admin-css', $path, array(), false, $media = 'all' );
     wp_enqueue_style( 'tt-portfolio-admin-css');
 }
-add_action('admin_init', 'tt_portfolio_admin_css');
+add_action('admin_head', 'tt_portfolio_admin_css');
