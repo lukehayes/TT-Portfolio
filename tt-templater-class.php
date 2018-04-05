@@ -37,4 +37,4 @@ class TT_Templater {
     }
 }
 
-TT_Templater::get_instance();
+// TT_Templater::get_instance();
